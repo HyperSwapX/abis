@@ -1,0 +1,166 @@
+[
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "contract IUniswapV2Factory",
+							"name": "v2PoolFactory",
+							"type": "address"
+						},
+						{
+							"internalType": "contract IUniswapV3Factory",
+							"name": "v3PoolFactory",
+							"type": "address"
+						},
+						{
+							"internalType": "contract INonfungiblePositionManager",
+							"name": "v3PositionManager",
+							"type": "address"
+						},
+						{
+							"internalType": "contract IHyperswapRouter",
+							"name": "v2Router",
+							"type": "address"
+						},
+						{
+							"internalType": "contract ISwapRouter",
+							"name": "v3Router",
+							"type": "address"
+						},
+						{
+							"internalType": "contract IQuoterV2",
+							"name": "v3Quoter",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "wrappedNative",
+							"type": "address"
+						}
+					],
+					"internalType": "struct SingleSidedPoolProvisioning.Config",
+					"name": "_config",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "tokenA",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "tokenB",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amountA",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "slippage",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct SingleSidedPoolProvisioning.LiquidityParamsV2",
+					"name": "params",
+					"type": "tuple"
+				}
+			],
+			"name": "provideLiquidityV2",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "liquidity",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount0Used",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount1Used",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "tokenA",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "tokenB",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amountA",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint24",
+							"name": "fee",
+							"type": "uint24"
+						},
+						{
+							"internalType": "uint256",
+							"name": "slippage",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct SingleSidedPoolProvisioning.LiquidityParamsV3",
+					"name": "params",
+					"type": "tuple"
+				}
+			],
+			"name": "provideLiquidityV3",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint128",
+					"name": "liquidity",
+					"type": "uint128"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount0Used",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount1Used",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"stateMutability": "payable",
+			"type": "receive"
+		}
+	]
